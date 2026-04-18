@@ -10,8 +10,9 @@
         android:id="@+id/nm_edit_salary"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:hint="Salary"
+        android:hint="@string/nm_salary_hint"
         android:inputType="numberDecimal"
+        android:autofillHints="none"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -21,8 +22,9 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:hint="Rent"
+        android:hint="@string/nm_rent_hint"
         android:inputType="numberDecimal"
+        android:autofillHints="none"
         app:layout_constraintTop_toBottomOf="@id/nm_edit_salary"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -32,8 +34,9 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:hint="Food"
+        android:hint="@string/nm_food_hint"
         android:inputType="numberDecimal"
+        android:autofillHints="none"
         app:layout_constraintTop_toBottomOf="@id/nm_edit_rent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -43,7 +46,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:text="Calculate"
+        android:text="@string/nm_btn_calculate"
         app:layout_constraintTop_toBottomOf="@id/nm_edit_food"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />

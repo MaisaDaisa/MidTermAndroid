@@ -1,6 +1,14 @@
 <resources>
     <string name="app_name">MidTermAndroid</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="name_surname_year">Nikoloz Maisadze 2004</string>
+
+    <string name="nm_salary_hint">Salary</string>
+    <string name="nm_rent_hint">Rent</string>
+    <string name="nm_food_hint">Food</string>
+    <string name="nm_btn_calculate">Calculate</string>
+
+    <string name="nm_expenses_format">Expenses: %1$.2f</string>
+    <string name="nm_savings_format">Savings: %1$.2f</string>
+    <string name="nm_identity_format">%1$s %2$s, %3$d</string>
 </resources>

@@ -6,7 +6,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.midtermandroid.databinding.FragmentABinding
 import com.example.midtermandroid.databinding.FragmentBBinding
 
 class FragmentB : Fragment() {
@@ -32,8 +31,8 @@ class FragmentB : Fragment() {
         val manager = FinanceManager()
         val result = manager.calculate(salary, rent, food)
 
-        binding.nmTxtExpensesResult.text = "Expenses: ${result.expenses}"
-        binding.nmTxtSavingsResult.text = "Savings: ${result.savings}"
+        binding.nmTxtExpensesResult.text = getString(R.string.nm_expenses_format, result.expenses)
+        binding.nmTxtSavingsResult.text = getString(R.string.nm_savings_format, result.savings)
 
         if (result.isPositive) {
             binding.nmTxtExpensesResult.setTextColor(Color.GREEN)
