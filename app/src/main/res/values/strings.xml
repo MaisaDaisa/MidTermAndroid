@@ -11,4 +11,6 @@
     <string name="nm_expenses_format">Expenses: %1$.2f</string>
     <string name="nm_savings_format">Savings: %1$.2f</string>
     <string name="nm_identity_format">%1$s %2$s, %3$d</string>
+    <string name="into_header">Finance Tracker</string>
+    <string name="intro_description">Enter your financial details below</string>
 </resources>

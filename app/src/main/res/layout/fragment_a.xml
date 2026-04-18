@@ -4,50 +4,101 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp">
+    android:padding="24dp">
 
-    <EditText
-        android:id="@+id/nm_edit_salary"
-        android:layout_width="0dp"
+    <TextView
+        android:id="@+id/nm_txt_title"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="@string/nm_salary_hint"
-        android:inputType="numberDecimal"
-        android:autofillHints="none"
+        android:text="@string/into_header"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_marginTop="32dp"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintStart_toStartOf="parent" />
 
-    <EditText
-        android:id="@+id/nm_edit_rent"
+    <TextView
+        android:id="@+id/nm_txt_subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/intro_description"
+        android:textSize="14sp"
+        android:alpha="0.6"
+        app:layout_constraintTop_toBottomOf="@id/nm_txt_title"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/nm_layout_salary"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="48dp"
+        android:hint="@string/nm_salary_hint"
+        app:layout_constraintTop_toBottomOf="@id/nm_txt_subtitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/nm_edit_salary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:autofillHints="none" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/nm_layout_rent"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:hint="@string/nm_rent_hint"
-        android:inputType="numberDecimal"
-        android:autofillHints="none"
-        app:layout_constraintTop_toBottomOf="@id/nm_edit_salary"
+        app:layout_constraintTop_toBottomOf="@id/nm_layout_salary"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent">
 
-    <EditText
-        android:id="@+id/nm_edit_food"
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/nm_edit_rent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:autofillHints="none" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/nm_layout_food"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:hint="@string/nm_food_hint"
-        android:inputType="numberDecimal"
-        android:autofillHints="none"
-        app:layout_constraintTop_toBottomOf="@id/nm_edit_rent"
+        app:layout_constraintTop_toBottomOf="@id/nm_layout_rent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent">
 
-    <Button
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/nm_edit_food"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:autofillHints="none" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/nm_btn_calculate"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="40dp"
         android:text="@string/nm_btn_calculate"
-        app:layout_constraintTop_toBottomOf="@id/nm_edit_food"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:letterSpacing="0.1"
+        app:cornerRadius="16dp"
+        app:elevation="4dp"
+        app:icon="@drawable/currency_pound_24"
+        app:iconGravity="textStart"
+        app:layout_constraintTop_toBottomOf="@id/nm_layout_food"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
